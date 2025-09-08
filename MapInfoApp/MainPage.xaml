@@ -1,0 +1,84 @@
+﻿<ContentPage
+    x:Class="MapInfoApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+    Title="Ireland Map">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" 
+            Value="{AppThemeBinding Light=Black, Dark=Black}" />
+        </Style>
+        <Style TargetType="Label" x:Key="SubtleLabel">
+            <Setter Property="TextColor" 
+            Value="{AppThemeBinding Light=#666666, Dark=#666666}" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+    </ContentPage.Resources>
+    <Grid>
+
+        <maps:Map x:Name="Map"
+                  MapType="Street"
+                  IsShowingUser="false" />
+
+        <Grid x:Name="InfoOverlay"
+              IsVisible="False">
+
+            <BoxView BackgroundColor="#66000000">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding HideOverlayCommand}" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+
+            <Border StrokeShape="RoundRectangle 16"
+                BackgroundColor="White"
+                StrokeThickness="0"
+                Shadow="5,5,10,Black"
+                VerticalOptions="End"
+                Margin="24"
+                Padding="0">
+
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+                     Padding="16"
+                    RowSpacing="8">
+
+                    <Image Grid.Row="0"
+                        HeightRequest="180"
+                        Aspect="AspectFill"
+                        HorizontalOptions="Fill"
+                        Margin="0,0,0,8"
+                        Source="{Binding SelectedPlace.StreetViewImageUrl}"
+                        IsVisible="{Binding SelectedPlace.HasStreetView}" />
+
+                    <Label Grid.Row="1"
+                        Text="{Binding SelectedPlace.Name}"
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        TextColor="{AppThemeBinding Light=Black, Dark=Black}" />
+
+                    <Label Grid.Row="2"
+                        Text="{Binding SelectedPlace.CleanDescription}"
+                        TextColor="{AppThemeBinding Light=Black, Dark=Black}" />
+
+                    <Label Grid.Row="3"
+                        Text="{Binding SelectedPlace.Description}"
+                        IsVisible="{Binding SelectedPlace.HasDescription}"
+                        TextColor="{AppThemeBinding Light=#666, Dark=#AAA}"
+                        FontSize="12" />
+
+                    <VerticalStackLayout Grid.Row="4" Spacing="8">
+                        <Button Text="Open on Instagram"
+                            IsVisible="{Binding SelectedPlace.HasInstagram}"
+                            Clicked="OnInstagramClicked" />
+                        <Button Text="Open in TikTok"
+                            IsVisible="{Binding SelectedPlace.HasTikTok}"
+                            Clicked="OnTikTokClicked" />
+                        <Button Text="Open in Google Maps"
+                            Clicked="OnGoogleMapsClicked" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>
