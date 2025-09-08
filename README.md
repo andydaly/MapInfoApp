@@ -57,20 +57,7 @@ Location details overlay
 
 ### Setup
 
-1.  Clone this repository:
-
-    ``` bash
-    git clone https://github.com/YOUR_USERNAME/WeirdIrelandApp.git
-    cd WeirdIrelandApp
-    ```
-
-2.  Install dependencies:
-
-    ``` bash
-    dotnet restore
-    ```
-
-3.  Configure secrets:
+Configure secrets:
 
     -   Copy
         `MapInfoApp/Platforms/Android/Resources/values/strings.example.xml`
@@ -95,12 +82,6 @@ Location details overlay
     ⚠️ Do **not** commit `strings.xml` to GitHub (it's excluded via
     `.gitignore`).
 
-4.  Run the app:
-
-    ``` bash
-    dotnet build
-    dotnet run -f net9.0-android
-    ```
 
 ------------------------------------------------------------------------
 
