@@ -12,11 +12,15 @@ navigation**.
 ## Screenshots
 
  
-Map with clustered pins             
+Map with clustered pins 
+
 ![Map](MapInfoApp/git_images/MapInfoScreenshot1.jpg)     
+
 -----------------------------------------------------------------------------
 Location details overlay
+
 ![Overlay](MapInfoApp/git_images/MapInfoScreenshot2.jpg)
+
  -----------------------------------------------------------------------------
  
 ## Features
@@ -41,7 +45,7 @@ Location details overlay
 
 -   [.NET MAUI](https://learn.microsoft.com/dotnet/maui/what-is-maui)
     (C#)
--   [MAUI.Maps](https://learn.microsoft.com/dotnet/maui/platform-integration/maps)\
+-   [MAUI.Maps](https://learn.microsoft.com/dotnet/maui/platform-integration/maps)
 -   Google Maps SDK for Android
 -   Google Street View API (optional image previews)
 
