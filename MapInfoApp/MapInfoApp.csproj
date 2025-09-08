@@ -60,6 +60,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\values\strings.example.xml" />
 	  <None Remove="Platforms\Android\Resources\values\strings.xml" />
 	</ItemGroup>
 
