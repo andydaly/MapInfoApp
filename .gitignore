@@ -53,4 +53,4 @@ secrets.json
 local.settings.json
 
 # Prevent committing Android strings.xml with keys
-MapInfoApp/MapInfoApp/Platforms/Android/Resources/values/strings.xml
+/MapInfoApp/Platforms/Android/Resources/values/strings.xml
