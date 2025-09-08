@@ -54,3 +54,4 @@ local.settings.json
 
 # Prevent committing Android strings.xml with keys
 /MapInfoApp/Platforms/Android/Resources/values/strings.xml
+/MapInfoApp/Platforms/Android/Resources/values/strings.xml
