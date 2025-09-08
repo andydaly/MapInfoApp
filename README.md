@@ -58,21 +58,20 @@ Location details overlay
 ### Setup
 
 Configure secrets:
-
-    -   Copy
+ - Copy
         `MapInfoApp/Platforms/Android/Resources/values/strings.example.xml`
         →\
         `MapInfoApp/Platforms/Android/Resources/values/strings.xml`
-    -   Fill in your **Google Maps API key** and **Google Drive file
+- Fill in your **Google Maps API key** and **Google Drive file
         ID**.
 
-    ``` xml
+``` xml
     <resources>
         <string name="app_name">Weird Ireland App</string>
         <string name="google_maps_api_key">YOUR_GOOGLE_MAPS_API_KEY</string>
         <string name="drive_file_id">YOUR_GOOGLE_DRIVE_FILE_ID</string>
     </resources>
-    ```
+```
 
     Important: In Visual Studio, set the `Build Action` of `strings.xml`
     to `AndroidResource`.\
