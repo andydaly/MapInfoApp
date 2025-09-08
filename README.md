@@ -11,13 +11,14 @@ navigation**.
 
 ## Screenshots
 
-  -----------------------------------------------------------------------------
-  Map with clustered pins             Location details overlay
-  ----------------------------------- -----------------------------------------
-  ![Map](MapInfoApp/git_images/MapInfoScreenshot1.jpg)     ![Overlay](MapInfoApp/git_images/MapInfoScreenshot2.jpg)
-
-  -----------------------------------------------------------------------------
-
+ 
+Map with clustered pins             
+![Map](MapInfoApp/git_images/MapInfoScreenshot1.jpg)     
+-----------------------------------------------------------------------------
+Location details overlay
+![Overlay](MapInfoApp/git_images/MapInfoScreenshot2.jpg)
+ -----------------------------------------------------------------------------
+ 
 ## Features
 
 -   Interactive map of Ireland using **.NET MAUI Maps**
